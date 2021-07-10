@@ -101,11 +101,12 @@ app.post('/updateExam', (req, res)=>{
     const name = req.body.name;
     const tipo = req.body.tipo;
     const status = req.body.status; 
-    
+    const laboratoryOther = req.body.laboratoryOther;
 
-        laboratory.update({name:name},{where:{id:id}});
-        laboratory.update({status:status},{where:{id:id}});
-        laboratory.update({tipo:tipo},{where:{id:id}});
+        exam.update({name:name},{where:{id:id}});
+        exam.update({status:status},{where:{id:id}});
+        exam.update({tipo:tipo},{where:{id:id}});
+        exam.update({laboratoryOther:laboratoryOther},{where:{id:id}});
         return res.json('Update Sucessfull');
     
 })
